@@ -1,0 +1,12 @@
+{
+  "name": "@types/appbox",
+  "version": "0.0.1",
+  "description": "Types for AppBox",
+  "main": "dist/Types.js",
+  "author": "Vic van Cooten",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  }
+}
