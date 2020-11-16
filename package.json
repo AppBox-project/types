@@ -1,6 +1,6 @@
 {
   "name": "appbox-types",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": "Types for AppBox",
   "main": "dist/Types.js",
   "author": "Vic van Cooten",

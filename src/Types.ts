@@ -8,6 +8,9 @@ export interface ModelType {
   primary: string;
   fields: { [name: string]: ModelFieldType };
   overviews: [ModelOverviewType];
+  lists?: { [key: string]: ModelListType };
+  rules?: { [key: string]: ModelRuleType };
+
   layouts: any;
   actions: any;
   api?: {
@@ -31,7 +34,26 @@ export interface ModelType {
   };
   _id: any;
 }
+export interface ModelRuleType {
+  name: string;
+  rule: string;
+  message: string;
+  checkedOn:
+    | "All"
+    | "Insert"
+    | "Update"
+    | "Delete"
+    | "InsertAndUpdate"
+    | "InsertAndDelete"
+    | "UpdateAndDelete"
+    | "Never";
+}
 
+export interface ModelListType {
+  name: string;
+  filter: { key: string; operator: "equals" | "not_equals"; value: any }[];
+  visibleFor?: string[];
+}
 export interface ModelFieldType {
   name: string;
   required: boolean;
